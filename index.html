@@ -1,198 +1,65 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Qalqon Imtihon — онлайн тест</title>
-<link rel="stylesheet" href="style.css">
-</head>
+.contacts{
+margin:80px auto 40px;
+max-width:1200px;
+padding:0 20px;
+}
 
-<body>
+.contacts h2{
+text-align:center;
+font-size:42px;
+font-weight:700;
+margin-bottom:40px;
+color:#fff;
+}
 
-<header>
-    <div class="brand">
-        <img src="logo.jpg" alt="Qalqon">
-        <div>
-            <b>QALQON IMTIHON</b>
-            <span>Подготовка к экзамену на патент</span>
-        </div>
-    </div>
+.contact-card{
+background:linear-gradient(145deg,#141414,#1d1d1d);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+}
 
-    <nav>
-        <a href="#variants">Варианты</a>
-        <a href="#about">Как работает</a>
-        <a href="#resultBlock">Результат</a>
-    </nav>
-</header>
+.contact-item{
+min-width:250px;
+}
 
-<main>
+.contact-icon{
+font-size:28px;
+margin-bottom:10px;
+}
 
-    <section class="hero">
-        <div>
-            <p class="tag">22 варианта • 22 вопроса • аудио-задания</p>
+.contact-item h3{
+margin:0 0 10px;
+color:#fff;
+}
 
-            <h1>Онлайн-тест для подготовки</h1>
+.contact-item a{
+color:#d7d7d7;
+text-decoration:none;
+font-size:18px;
+}
 
-            <p>
-                Выберите вариант, зарегистрируйтесь и пройдите тест.
-                После завершения увидите количество правильных и неправильных ответов,
-                а затем подробный разбор каждого вопроса.
-            </p>
+.contact-item a:hover
 
-            <a class="btn" href="#variants">Начать тест</a>
-        </div>
+.qr-block{
+display:flex;
+justify-content:center;
+align-items:center;
+}
 
-        <img class="founder" src="founder.jpg" alt="Основатель">
-    </section>
+.qr-block img{
+width:180px;
+height:auto;
+border-radius:14px;
+}
 
-    <section id="about" class="cards">
-        <div>
-            <b>Регистрация</b>
-            <p>ФИО, телефон и дата тестирования перед стартом.</p>
-        </div>
-
-        <div>
-            <b>Аудио</b>
-            <p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p>
-        </div>
-
-        <div>
-            <b>Результат</b>
-            <p>Сначала общий итог, ниже правильные и неправильные ответы.</p>
-        </div>
-    </section>
-
-    <section id="variants">
-        <h2>Выберите вариант</h2>
-        <div id="variantGrid" class="variantGrid"></div>
-    </section>
-
-    <section id="testPanel" class="hidden panel">
-
-        <div class="topline">
-
-            <button id="backBtn" class="ghost">
-                ← Варианты
-            </button>
-
-            <div>
-                <b id="testTitle"></b>
-                <span id="progressText"></span>
-            </div>
-
-            <div id="timer">00:00</div>
-
-        </div>
-
-        <div class="progress">
-            <i id="progressBar"></i>
-        </div>
-
-        <form id="regForm" class="reg">
-
-            <h3>Регистрация</h3>
-
-            <label>
-                ФИО
-                <input id="fio" required placeholder="Иванов Иван Иванович">
-            </label>
-
-            <label>
-                Телефон
-                <input id="phone" required placeholder="+7 ...">
-            </label>
-
-            <label>
-                Дата тестирования
-                <input id="testDate" type="date" required>
-            </label>
-
-            <button class="btn" type="submit">
-                Перейти к вопросам
-            </button>
-
-        </form>
-
-        <div id="quiz" class="hidden">
-
-            <aside id="questionNav"></aside>
-
-            <article id="questionBox"></article>
-
-            <div class="actions">
-
-                <button id="prevQ" class="ghost">
-                    Назад
-                </button>
-
-                <button id="nextQ" class="btn">
-                    Далее
-                </button>
-
-                <button id="finishBtn" class="danger">
-                    Завершить тест
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="resultBlock" class="hidden panel"></section>
-
-    <section class="contacts">
-
-        <h2>Связь с нами</h2>
-
-        <div class="contact-card">
-
-            <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div>
-                    <h3>Телефон</h3>
-                    <a href="tel:+998776437424">
-                        +998 77 643 74 24
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div>
-                    <h3>Электронная почта</h3>
-                    <a href="mailto:qalqon_tashkent@mail.ru">
-                        qalqon_tashkent@mail.ru
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">📲</div>
-                <div>
-                    <h3>Telegram</h3>
-                    <a href="https://t.me/QALQON_TASHKENT" target="_blank">
-                        @QALQON_TASHKENT
-                    </a>
-                </div>
-            </div>
-
-            <div class="qr-block">
-                <img src="telegram_qr.png.png" alt="QR код Telegram">
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer>
-    © QALQON IMTIHON • Все права защищены
-</footer>
-
-<script src="questions.js"></script>
-<script src="app.js"></script>
-
-</body>
-</html>
+footer{
+text-align:center;
+padding:25px;
+color:#8f8f8f;
+}
