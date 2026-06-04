@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -18,136 +19,181 @@
         </div>
     </div>
 
-    <nav>
-        <a href="#variants">Варианты</a>
-        <a href="#about">Как работает</a>
-        <a href="#resultBlock">Результат</a>
-    </nav>
+```
+<nav>
+    <a href="#variants">Варианты</a>
+    <a href="#about">Как работает</a>
+    <a href="#resultBlock">Результат</a>
+</nav>
+```
+
 </header>
 
 <main>
 
-    <section class="hero">
+```
+<section class="hero">
+    <div>
+        <p class="tag">22 варианта • 22 вопроса • аудио-задания</p>
+
+        <h1>Онлайн-тест для подготовки</h1>
+
+        <p>
+            Выберите вариант, зарегистрируйтесь и пройдите тест.
+            После завершения увидите количество правильных и неправильных ответов,
+            а затем подробный разбор каждого вопроса.
+        </p>
+
+        <a class="btn" href="#variants">Начать тест</a>
+    </div>
+
+    <img class="founder" src="founder.jpg" alt="Основатель">
+</section>
+
+<section id="about" class="cards">
+    <div>
+        <b>Регистрация</b>
+        <p>ФИО, телефон и дата тестирования перед стартом.</p>
+    </div>
+
+    <div>
+        <b>Аудио</b>
+        <p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p>
+    </div>
+
+    <div>
+        <b>Результат</b>
+        <p>Сначала общий итог, ниже правильные и неправильные ответы.</p>
+    </div>
+</section>
+
+<section id="variants">
+    <h2>Выберите вариант</h2>
+    <div id="variantGrid" class="variantGrid"></div>
+</section>
+
+<section id="testPanel" class="hidden panel">
+
+    <div class="topline">
+
+        <button id="backBtn" class="ghost">
+            ← Варианты
+        </button>
+
         <div>
-            <p class="tag">22 варианта • 22 вопроса • аудио-задания</p>
+            <b id="testTitle"></b>
+            <span id="progressText"></span>
+        </div>
 
-            <h1>Онлайн-тест для подготовки</h1>
+        <div id="timer">00:00</div>
 
+    </div>
+
+    <div class="progress">
+        <i id="progressBar"></i>
+    </div>
+
+    <form id="regForm" class="reg">
+
+        <h3>Регистрация</h3>
+
+        <label>
+            ФИО
+            <input id="fio" required placeholder="Иванов Иван Иванович">
+        </label>
+
+        <label>
+            Телефон
+            <input id="phone" required placeholder="+7 ...">
+        </label>
+
+        <label>
+            Дата тестирования
+            <input id="testDate" type="date" required>
+        </label>
+
+        <button class="btn" type="submit">
+            Перейти к вопросам
+        </button>
+
+    </form>
+
+    <div id="quiz" class="hidden">
+
+        <aside id="questionNav"></aside>
+
+        <article id="questionBox"></article>
+
+        <div class="actions">
+
+            <button id="prevQ" class="ghost">
+                Назад
+            </button>
+
+            <button id="nextQ" class="btn">
+                Далее
+            </button>
+
+            <button id="finishBtn" class="danger">
+                Завершить тест
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="resultBlock" class="hidden panel"></section>
+
+<section class="contacts">
+
+    <h2>Связь с нами</h2>
+
+    <div class="contact-wrapper">
+
+        <div class="contact-left">
+
+            <p><strong>📞 Телефон</strong></p>
             <p>
-                Выберите вариант, зарегистрируйтесь и пройдите тест.
-                После завершения увидите количество правильных и неправильных ответов,
-                а затем подробный разбор каждого вопроса.
+                <a href="tel:+998776437424">
+                    +998 77 643 74 24
+                </a>
             </p>
 
-            <a class="btn" href="#variants">Начать тест</a>
-        </div>
+            <p><strong>📧 Электронная почта</strong></p>
+            <p>
+                <a href="mailto:qalqon_tashkent@mail.ru">
+                    qalqon_tashkent@mail.ru
+                </a>
+            </p>
 
-        <img class="founder" src="founder.jpg" alt="Основатель">
-    </section>
-
-    <section id="about" class="cards">
-        <div>
-            <b>Регистрация</b>
-            <p>ФИО, телефон и дата тестирования перед стартом.</p>
-        </div>
-
-        <div>
-            <b>Аудио</b>
-            <p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p>
-        </div>
-
-        <div>
-            <b>Результат</b>
-            <p>Сначала общий итог, ниже правильные и неправильные ответы.</p>
-        </div>
-    </section>
-
-    <section id="variants">
-        <h2>Выберите вариант</h2>
-        <div id="variantGrid" class="variantGrid"></div>
-    </section>
-
-    <section id="testPanel" class="hidden panel">
-
-        <div class="topline">
-
-            <button id="backBtn" class="ghost">
-                ← Варианты
-            </button>
-
-            <div>
-                <b id="testTitle"></b>
-                <span id="progressText"></span>
-            </div>
-
-            <div id="timer">00:00</div>
+            <p><strong>📲 Telegram</strong></p>
+            <p>
+                <a href="https://t.me/QALQON_TASHKENT" target="_blank">
+                    @QALQON_TASHKENT
+                </a>
+            </p>
 
         </div>
 
-        <div class="progress">
-            <i id="progressBar"></i>
+        <div class="contact-right">
+            <img src="telegram_qr.png" alt="QR код Telegram">
         </div>
 
-        <form id="regForm" class="reg">
+    </div>
 
-            <h3>Регистрация</h3>
-
-            <label>
-                ФИО
-                <input id="fio" required placeholder="Иванов Иван Иванович">
-            </label>
-
-            <label>
-                Телефон
-                <input id="phone" required placeholder="+7 ...">
-            </label>
-
-            <label>
-                Дата тестирования
-                <input id="testDate" type="date" required>
-            </label>
-
-            <button class="btn" type="submit">
-                Перейти к вопросам
-            </button>
-
-        </form>
-
-        <div id="quiz" class="hidden">
-
-            <aside id="questionNav"></aside>
-
-            <article id="questionBox"></article>
-
-            <div class="actions">
-
-                <button id="prevQ" class="ghost">
-                    Назад
-                </button>
-
-                <button id="nextQ" class="btn">
-                    Далее
-                </button>
-
-                <button id="finishBtn" class="danger">
-                    Завершить тест
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="resultBlock" class="hidden panel"></section>
+</section>
+```
 
 </main>
 
 <footer>
-    QALQON • Учебная тестовая платформа
+    © QALQON IMTIHON • Все права защищены
 </footer>
 
 <script src="questions.js"></script>
+
 <script src="app.js"></script>
 
 </body>
