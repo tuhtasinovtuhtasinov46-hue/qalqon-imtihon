@@ -1,12 +1,154 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qalqon Imtihon — онлайн тест</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="brand"><img src="logo.jpg" alt="Qalqon"><div><b>QALQON IMTIHON</b><span>Подготовка к экзамену на патент</span></div></div><nav><a href="#variants">Варианты</a><a href="#about">Как работает</a><a href="#resultBlock">Результат</a></nav></header>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qalqon Imtihon — онлайн тест</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <img src="logo.jpg" alt="Qalqon">
+        <div>
+            <b>QALQON IMTIHON</b>
+            <span>Подготовка к экзамену на патент</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#variants">Варианты</a>
+        <a href="#about">Как работает</a>
+        <a href="#resultBlock">Результат</a>
+    </nav>
+</header>
+
 <main>
-<section class="hero"><div><p class="tag">22 варианта • 22 вопроса • аудио-задания</p><h1>Онлайн-тест для подготовки</h1><p>Выберите вариант, зарегистрируйтесь и пройдите тест. После завершения увидите количество правильных и неправильных ответов, затем подробный разбор каждого вопроса.</p><a class="btn" href="#variants">Начать тест</a></div><img class="founder" src="founder.jpg" alt="Основатель">
-<section id="about" class="cards"><div><b>Регистрация</b><p>ФИО, телефон и дата тестирования перед стартом.</p></div><div><b>Аудио</b><p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p></div><div><b>Результат</b><p>Сначала общий итог, ниже правильные и неправильные ответы.</p></div></section>
-<section id="variants"><h2>Выберите вариант</h2><div id="variantGrid" class="variantGrid"></div></section>
-<section id="testPanel" class="hidden panel"><div class="topline"><button id="backBtn" class="ghost">← Варианты</button><div><b id="testTitle"></b><span id="progressText"></span></div><div id="timer">00:00</div></div><div class="progress"><i id="progressBar"></i></div>
-<form id="regForm" class="reg"><h3>Регистрация</h3><label>ФИО<input id="fio" required placeholder="Иванов Иван Иванович"></label><label>Телефон<input id="phone" required placeholder="+7 ..."></label><label>Дата тестирования<input id="testDate" type="date" required></label><button class="btn" type="submit">Перейти к вопросам</button></form>
-<div id="quiz" class="hidden"><aside id="questionNav"></aside><article id="questionBox"></article><div class="actions"><button id="prevQ" class="ghost">Назад</button><button id="nextQ" class="btn">Далее</button><button id="finishBtn" class="danger">Завершить тест</button></div></div></section>
-<section id="resultBlock" class="hidden panel"></section>
-</main><footer>QALQON • Учебная тестовая платформа. Контент можно заменить в файле questions.js.</footer>
-<script src="questions.js"></script><script src="app.js"></script></body></html>
+
+    <section class="hero">
+        <div>
+            <p class="tag">22 варианта • 22 вопроса • аудио-задания</p>
+
+            <h1>Онлайн-тест для подготовки</h1>
+
+            <p>
+                Выберите вариант, зарегистрируйтесь и пройдите тест.
+                После завершения увидите количество правильных и неправильных ответов,
+                а затем подробный разбор каждого вопроса.
+            </p>
+
+            <a class="btn" href="#variants">Начать тест</a>
+        </div>
+
+        <img class="founder" src="founder.jpg" alt="Основатель">
+    </section>
+
+    <section id="about" class="cards">
+        <div>
+            <b>Регистрация</b>
+            <p>ФИО, телефон и дата тестирования перед стартом.</p>
+        </div>
+
+        <div>
+            <b>Аудио</b>
+            <p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p>
+        </div>
+
+        <div>
+            <b>Результат</b>
+            <p>Сначала общий итог, ниже правильные и неправильные ответы.</p>
+        </div>
+    </section>
+
+    <section id="variants">
+        <h2>Выберите вариант</h2>
+        <div id="variantGrid" class="variantGrid"></div>
+    </section>
+
+    <section id="testPanel" class="hidden panel">
+
+        <div class="topline">
+
+            <button id="backBtn" class="ghost">
+                ← Варианты
+            </button>
+
+            <div>
+                <b id="testTitle"></b>
+                <span id="progressText"></span>
+            </div>
+
+            <div id="timer">00:00</div>
+
+        </div>
+
+        <div class="progress">
+            <i id="progressBar"></i>
+        </div>
+
+        <form id="regForm" class="reg">
+
+            <h3>Регистрация</h3>
+
+            <label>
+                ФИО
+                <input id="fio" required placeholder="Иванов Иван Иванович">
+            </label>
+
+            <label>
+                Телефон
+                <input id="phone" required placeholder="+7 ...">
+            </label>
+
+            <label>
+                Дата тестирования
+                <input id="testDate" type="date" required>
+            </label>
+
+            <button class="btn" type="submit">
+                Перейти к вопросам
+            </button>
+
+        </form>
+
+        <div id="quiz" class="hidden">
+
+            <aside id="questionNav"></aside>
+
+            <article id="questionBox"></article>
+
+            <div class="actions">
+
+                <button id="prevQ" class="ghost">
+                    Назад
+                </button>
+
+                <button id="nextQ" class="btn">
+                    Далее
+                </button>
+
+                <button id="finishBtn" class="danger">
+                    Завершить тест
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="resultBlock" class="hidden panel"></section>
+
+</main>
+
+<footer>
+    QALQON • Учебная тестовая платформа
+</footer>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
