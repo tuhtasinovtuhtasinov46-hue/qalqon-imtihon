@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -19,172 +18,172 @@
         </div>
     </div>
 
-```
-<nav>
-    <a href="#variants">Варианты</a>
-    <a href="#about">Как работает</a>
-    <a href="#resultBlock">Результат</a>
-</nav>
-```
-
+    <nav>
+        <a href="#variants">Варианты</a>
+        <a href="#about">Как работает</a>
+        <a href="#resultBlock">Результат</a>
+    </nav>
 </header>
 
 <main>
 
-```
-<section class="hero">
-    <div>
-        <p class="tag">22 варианта • 22 вопроса • аудио-задания</p>
+    <section class="hero">
+        <div>
+            <p class="tag">22 варианта • 22 вопроса • аудио-задания</p>
 
-        <h1>Онлайн-тест для подготовки</h1>
+            <h1>Онлайн-тест для подготовки</h1>
 
-        <p>
-            Выберите вариант, зарегистрируйтесь и пройдите тест.
-            После завершения увидите количество правильных и неправильных ответов,
-            а затем подробный разбор каждого вопроса.
-        </p>
+            <p>
+                Выберите вариант, зарегистрируйтесь и пройдите тест.
+                После завершения увидите количество правильных и неправильных ответов,
+                а затем подробный разбор каждого вопроса.
+            </p>
 
-        <a class="btn" href="#variants">Начать тест</a>
-    </div>
+            <a class="btn" href="#variants">Начать тест</a>
+        </div>
 
-    <img class="founder" src="founder.jpg" alt="Основатель">
-</section>
+        <img class="founder" src="founder.jpg" alt="Основатель">
+    </section>
 
-<section id="about" class="cards">
-    <div>
-        <b>Регистрация</b>
-        <p>ФИО, телефон и дата тестирования перед стартом.</p>
-    </div>
-
-    <div>
-        <b>Аудио</b>
-        <p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p>
-    </div>
-
-    <div>
-        <b>Результат</b>
-        <p>Сначала общий итог, ниже правильные и неправильные ответы.</p>
-    </div>
-</section>
-
-<section id="variants">
-    <h2>Выберите вариант</h2>
-    <div id="variantGrid" class="variantGrid"></div>
-</section>
-
-<section id="testPanel" class="hidden panel">
-
-    <div class="topline">
-
-        <button id="backBtn" class="ghost">
-            ← Варианты
-        </button>
+    <section id="about" class="cards">
+        <div>
+            <b>Регистрация</b>
+            <p>ФИО, телефон и дата тестирования перед стартом.</p>
+        </div>
 
         <div>
-            <b id="testTitle"></b>
-            <span id="progressText"></span>
+            <b>Аудио</b>
+            <p>В каждом варианте есть 2 голосовых задания: одно аудио и две части ответа.</p>
         </div>
 
-        <div id="timer">00:00</div>
+        <div>
+            <b>Результат</b>
+            <p>Сначала общий итог, ниже правильные и неправильные ответы.</p>
+        </div>
+    </section>
 
-    </div>
+    <section id="variants">
+        <h2>Выберите вариант</h2>
+        <div id="variantGrid" class="variantGrid"></div>
+    </section>
 
-    <div class="progress">
-        <i id="progressBar"></i>
-    </div>
+    <section id="testPanel" class="hidden panel">
 
-    <form id="regForm" class="reg">
+        <div class="topline">
 
-        <h3>Регистрация</h3>
-
-        <label>
-            ФИО
-            <input id="fio" required placeholder="Иванов Иван Иванович">
-        </label>
-
-        <label>
-            Телефон
-            <input id="phone" required placeholder="+7 ...">
-        </label>
-
-        <label>
-            Дата тестирования
-            <input id="testDate" type="date" required>
-        </label>
-
-        <button class="btn" type="submit">
-            Перейти к вопросам
-        </button>
-
-    </form>
-
-    <div id="quiz" class="hidden">
-
-        <aside id="questionNav"></aside>
-
-        <article id="questionBox"></article>
-
-        <div class="actions">
-
-            <button id="prevQ" class="ghost">
-                Назад
+            <button id="backBtn" class="ghost">
+                ← Варианты
             </button>
 
-            <button id="nextQ" class="btn">
-                Далее
+            <div>
+                <b id="testTitle"></b>
+                <span id="progressText"></span>
+            </div>
+
+            <div id="timer">00:00</div>
+
+        </div>
+
+        <div class="progress">
+            <i id="progressBar"></i>
+        </div>
+
+        <form id="regForm" class="reg">
+
+            <h3>Регистрация</h3>
+
+            <label>
+                ФИО
+                <input id="fio" required placeholder="Иванов Иван Иванович">
+            </label>
+
+            <label>
+                Телефон
+                <input id="phone" required placeholder="+7 ...">
+            </label>
+
+            <label>
+                Дата тестирования
+                <input id="testDate" type="date" required>
+            </label>
+
+            <button class="btn" type="submit">
+                Перейти к вопросам
             </button>
 
-            <button id="finishBtn" class="danger">
-                Завершить тест
-            </button>
+        </form>
+
+        <div id="quiz" class="hidden">
+
+            <aside id="questionNav"></aside>
+
+            <article id="questionBox"></article>
+
+            <div class="actions">
+
+                <button id="prevQ" class="ghost">
+                    Назад
+                </button>
+
+                <button id="nextQ" class="btn">
+                    Далее
+                </button>
+
+                <button id="finishBtn" class="danger">
+                    Завершить тест
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <section id="resultBlock" class="hidden panel"></section>
 
-<section id="resultBlock" class="hidden panel"></section>
+    <section class="contacts">
 
-<section class="contacts">
+        <h2>Связь с нами</h2>
 
-    <h2>Связь с нами</h2>
+        <div class="contact-card">
 
-    <div class="contact-wrapper">
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <h3>Телефон</h3>
+                    <a href="tel:+998776437424">
+                        +998 77 643 74 24
+                    </a>
+                </div>
+            </div>
 
-        <div class="contact-left">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                    <h3>Электронная почта</h3>
+                    <a href="mailto:qalqon_tashkent@mail.ru">
+                        qalqon_tashkent@mail.ru
+                    </a>
+                </div>
+            </div>
 
-            <p><strong>📞 Телефон</strong></p>
-            <p>
-                <a href="tel:+998776437424">
-                    +998 77 643 74 24
-                </a>
-            </p>
+            <div class="contact-item">
+                <div class="contact-icon">📲</div>
+                <div>
+                    <h3>Telegram</h3>
+                    <a href="https://t.me/QALQON_TASHKENT" target="_blank">
+                        @QALQON_TASHKENT
+                    </a>
+                </div>
+            </div>
 
-            <p><strong>📧 Электронная почта</strong></p>
-            <p>
-                <a href="mailto:qalqon_tashkent@mail.ru">
-                    qalqon_tashkent@mail.ru
-                </a>
-            </p>
-
-            <p><strong>📲 Telegram</strong></p>
-            <p>
-                <a href="https://t.me/QALQON_TASHKENT" target="_blank">
-                    @QALQON_TASHKENT
-                </a>
-            </p>
+            <div class="qr-block">
+                <img src="telegram_qr.png.png" alt="QR код Telegram">
+            </div>
 
         </div>
 
-        <div class="contact-right">
-            <img src="telegram_qr.png" alt="QR код Telegram">
-        </div>
-
-    </div>
-
-</section>
-```
+    </section>
 
 </main>
 
@@ -193,7 +192,6 @@
 </footer>
 
 <script src="questions.js"></script>
-
 <script src="app.js"></script>
 
 </body>
